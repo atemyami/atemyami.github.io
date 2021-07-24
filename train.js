@@ -149,20 +149,30 @@ $(document).ready(function(){
   });
 
 $('.sendinfo').click(function(){
-  var data = {
-    name: $("#name").val(),
-    email: $("#email").val(),
-    message: $("#addres").val()
+
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'youremail@gmail.com',
+    pass: 'yourpassword'
+  }
+});
+
+var mailOptions = {
+  from: 'olaadases@gmail.com',
+  to: 'asilseeds@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
 };
-$.ajax({
-    type: "POST",
-    url: "script.php",
-    data: data,
-    success: function(){
-        // Redirection on success
-        var url = "http://example.com/confirmation.html";    
-        $(location).attr('https://atemyami.github.io',url);
-    }
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
 });
 });
   
