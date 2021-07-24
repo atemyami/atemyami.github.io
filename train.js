@@ -161,9 +161,10 @@ $.ajax({
     success: function(){
         // Redirection on success
         var url = "http://example.com/confirmation.html";    
-        $(location).attr('href',url);
+        $(location).attr('https://atemyami.github.io',url);
     }
 });
 });
+  
   
 });
