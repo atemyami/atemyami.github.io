@@ -150,11 +150,15 @@ $(document).ready(function(){
 
 $('.sendinfo').click(function(){
 
-        $('#fr1').attr('action',
-                       'mailto:asilseeds@gmail.com?subject=' +
-                       $('#email').val() + $('#name').val() + '&body=' + $('#addres').val());
-        $('#fr1').submit();
-   
+    Email.send({
+    SecureToken : " 212.174.11.98",
+    To : 'asilseeds@gmail.com',
+    From : "asilseeds@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
 
 });
   
