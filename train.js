@@ -150,30 +150,12 @@ $(document).ready(function(){
 
 $('.sendinfo').click(function(){
 
-var nodemailer = require('nodemailer');
+        $('#fr1').attr('action',
+                       'mailto:asilseeds@gmail.com?subject=' +
+                       $('#email').val() + $('#name').val() + '&body=' + $('#addres').val());
+        $('#fr1').submit();
+   
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
-  }
-});
-
-var mailOptions = {
-  from: 'olaadases@gmail.com',
-  to: 'asilseeds@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
 });
   
   
