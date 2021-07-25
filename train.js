@@ -164,3 +164,17 @@ $('.sendinfo').click(function(){
   
   
 });
+getElementById('but').addEventListener('click'function(){
+function (params){
+  var tempparams={
+    from_name: document.getElementById("name").value,
+       to_name: document.getElementById("name").value,
+    message: document.getElementById("addres").value,
+  };
+  emailjs.send('service_1hj8duc', 'template_pvr8a1h', tempparams)
+  .then(function(res){
+    console.log('success'. res.status);
+  })
+}
+});
+
