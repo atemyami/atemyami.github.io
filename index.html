@@ -651,10 +651,12 @@
 
         </div>
 
-    </div>
-<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"  method="post" enctype="text/plain"  action="https://formspree.io/f/mqkwdvvw">
- 
+   <form id="fs-frm"  action="https://formspree.io/f/xqkwyzpe"
+  method="POST"
+  enctype="multipart/form-data">
+    <fieldset id="fs-frm-inputs"></fieldset>
     <div class="forma">
+     
         <div class="tit">
             <h1>Buy an item</h1>
         </div>
@@ -662,23 +664,50 @@
         <div class="piccom"><img src="./yy.png" alt="buy"></div>
         <div class="containe">
             <div class="name">
-                <label for="name">Name </label><br><br>
-                <label for="adress">Address </label><br><br>
-                <label for="email">Email </label>
+              <label for="full-name">Full Name</label><br><br>
+                <label for="email-address">Email Address</label><br><br>
+                 <label for="message">Address</label>
 
 
             </div>
             <div class="input">
-                <input type="text" name="emailo" id="email"><br>
-                <input type="text" name="addreso" id="addres"><br>
-                <input type="text" name="nameo" id="name">
+                    <input type="text" name="name" id="full-name" required="">
+               <input type="email" name="_replyto" id="email-address" required=""><br>
+                 <input type="text" name="nname" id="full-address"  required=""><br>
+              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 
             </div>
-            <div class="submit" id="sendinfo"><input type="button" value="Send Email" id="but" class="butto"/></div>
+            <div class="submit" id="sendinfo">   <input class="butto" type="submit" value="Submit"></div>
 
         </div>
-    </div>
+        </div>
+        
+ 
+    </fieldset>
  </form>
+
+<script>
+    var form = document.getElementById("fs-frm");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("but");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 
     <footer>
