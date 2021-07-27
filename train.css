@@ -1,5 +1,4 @@
-    /*start variables*/
-    
+
     SEMILLAS* {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -207,7 +206,13 @@
         font-size: 36px;
         color: #ffff;
     }
-    
+       header .whole .container nav .basket:active{
+ --main-coloroo: rgb(165, 221, 45);
+       }
+       header .whole .container nav .basket:hover{
+ --main-coloroo: rgb(165, 221, 45);
+       }
+
 
     header  .byen{
    
