@@ -1,7 +1,8 @@
 
 $(document).ready(function(){
+
   $('.basket').click(function(){
-       var shownproducts= $('.byen').toggle();
+      $('.byen').toggle();
   });
 
   $("#tomato").click(function(){ 
@@ -10,8 +11,8 @@ $(document).ready(function(){
       $(".remove").click(function(){
         $(".poducttomato").hide();
     });
-  
   });
+
    $("#spanich").click(function(){
         $(".poductspinach").show();
     $(".removeo").click(function(){
@@ -20,19 +21,17 @@ $(document).ready(function(){
   });
 
     $("#purslane").click(function(){
+        $(".poductpurslane").show();
  $(".removep").click(function(){
     $(".poductpurslane").hide();
   });
-
-    $(".poductpurslane").show();
   });
 
     $("#rocca").click(function(){
- $(".removek").click(function(){
-    $(".poductrocca").hide();
-  });
-
-    $(".poductrocca").show();
+        $(".poductrocca").show();
+      $(".removek").click(function(){
+          $(".poductrocca").hide();
+        });
   });
 
     $("#pepper").click(function(){
@@ -40,15 +39,12 @@ $(document).ready(function(){
  $(".removeh").click(function(){
     $(".poductpepper").hide();
   });
-
- 
   });
 
     $("#onion").click(function(){
  $(".removef").click(function(){
     $(".poductonion").hide();
   });
-
     $(".poductonion").show();
   });
 
@@ -56,7 +52,6 @@ $(document).ready(function(){
  $(".removed").click(function(){
     $(".poductokra").hide();
   });
-
     $(".poductokra").show();
   });
 
@@ -64,7 +59,6 @@ $(document).ready(function(){
  $(".removeg").click(function(){
     $(".poductmulukhiya").hide();
   });
-
     $(".poductmulukhiya").show();
   });
 
@@ -148,33 +142,25 @@ $(document).ready(function(){
     $(".poductcucumber").show();
   });
 
-$('.sendinfo').click(function(){
-
-    Email.send({
-    SecureToken : " 212.174.11.98",
-    To : 'asilseeds@gmail.com',
-    From : "asilseeds@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
 
 });
-  
-  
-});
-getElementById('but').addEventListener('click'function(){
-function (params){
-  var tempparams={
-    from_name: document.getElementById("name").value,
-       to_name: document.getElementById("name").value,
-    message: document.getElementById("addres").value,
-  };
-  emailjs.send('service_1hj8duc', 'template_pvr8a1h', tempparams)
-  .then(function(res){
-    console.log('success'. res.status);
-  })
-}
-});
-
+    var form = document.getElementById("fs-frm");
+    var item= document.getElementById('bos')
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("but");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
