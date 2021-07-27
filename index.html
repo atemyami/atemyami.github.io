@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +44,6 @@
     <link rel="stylesheet" href="./aboutus.html">
 
     <link rel="stylesheet" href="960_12_col.css" />
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </head>
 
@@ -651,7 +649,8 @@
 
         </div>
 
-   <form id="fs-frm"  action="https://formspree.io/f/xqkwyzpe"
+    </div>
+     <form id="fs-frm"  action="https://formspree.io/f/xqkwyzpe"
   method="POST"
   enctype="multipart/form-data">
     <fieldset id="fs-frm-inputs"></fieldset>
@@ -674,7 +673,7 @@
                     <input type="text" name="name" id="full-name" required="">
                <input type="email" name="_replyto" id="email-address" required=""><br>
                  <input type="text" name="nname" id="full-address"  required=""><br>
-              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+              <input type="hidden" name="_subject" id="bos" value="Contact Form Submission">
 
             </div>
             <div class="submit" id="sendinfo">   <input class="butto" type="submit" value="Submit"></div>
@@ -686,28 +685,6 @@
     </fieldset>
  </form>
 
-<script>
-    var form = document.getElementById("fs-frm");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("but");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
 
 
     <footer>
@@ -778,12 +755,12 @@
 
     </footer>
     <script src="./jquery-3.6.0.min.js"></script>
-      <script src="./jquery-3.6.0.js"></script>
+      <script src="./jquery-3.6.0js"></script>
    <script src="./train.js"></script>
-   <script src="./script.php"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 </body>
 
