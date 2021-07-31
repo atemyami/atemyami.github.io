@@ -373,10 +373,10 @@ position: relative;
 
 
 
-    header img {
-    padding-bottom: 20px;
-    height: 80px;
-}
+  header img {
+    padding-bottom: 0px;
+    height: 110px;
+    }
     header .whole .container nav .basket {
     font-size: 36px;
     padding-right: 0.5em;
@@ -422,13 +422,9 @@ position: relative;
 
   
     header .byen .outim{
-
         padding-top: 0;
-
-        padding-left: 2px;
+        padding-left: 10px;
         padding-right: 0px;
- 
-    
     }
     a{
         text-decoration: none;
