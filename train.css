@@ -131,7 +131,7 @@ p {
 }
 /*THE LOGO*/
 
-header img {
+header img{
     padding-bottom: 30px;
     height: 120px;
 }
@@ -370,13 +370,24 @@ position: relative;
 
 }
 @media(max-width: 758px){
+h2 {
+    line-height: 1.2;
+        font-size: 25px;
+}
+p {
+    font-size: 14px;
+    line-height: 1.1;
+}
+header img{
+    height: 80px;
+    padding-bottom: 20px;
+}/*
+header .logos {
+  height: 80px;
+    padding-bottom: 30px;
+}
+*/
 
-
-
-  header img {
-    padding-bottom: 0px;
-    height: 110px;
-    }
     header .whole .container nav .basket {
     font-size: 36px;
     padding-right: 0.5em;
@@ -390,7 +401,7 @@ position: relative;
         position: relative;
         display: block;
         float:  right;
-        margin-top: -325px ;
+        margin-top:-200px;
         height: auto;
         margin-right: 2em;
         
@@ -412,18 +423,17 @@ position: relative;
         -o-transform: translateX( -50%);
 
     }
-    header .byen .texto i{
-        float: right;
-        padding-top: 10px;
-        padding-right: 10px;
-        position: relative;
-        color: rgb(138, 141, 137);
-    } 
-
+ header .byen .texto i {
+    float: right;
+    padding-top: 17px;
+    padding-right: 12px;
+    position: relative;
+    color: rgb(138, 141, 137);
+    }
   
     header .byen .outim{
         padding-top: 0;
-        padding-left: 10px;
+        padding-left: 25px;
         padding-right: 0px;
     }
     a{
