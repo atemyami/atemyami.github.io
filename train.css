@@ -180,11 +180,10 @@ header .container nav .toggle-menu:hover+ul {
     line-height: 5px;
     background-color: rgb(165 221 45/ 50%);
 }
-
 header .whole .container nav ul li a {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(91 124 9);
     font-size: 16px;
     transition: 0.3s;
     padding: 40px 10px;
@@ -221,8 +220,7 @@ header .container nav ul li a:hover {
 
 header .whole .container nav .basket {
     font-size: 36px;
-
-    color: #ffff;
+    color: #8ac003;
 }
     header .whole .container nav .basket:active{
 --main-coloroo: rgb(165, 221, 45);
