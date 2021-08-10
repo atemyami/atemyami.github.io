@@ -149,7 +149,7 @@ $(document).ready(function() {
     });
 
 });
- 
+ /*
 $('.bobtn').click(function(){
     <?php
 // The message
@@ -161,7 +161,7 @@ $message = wordwrap($message, 70, "\r\n");
 // Send
 mail('caffeinated@example.com', 'My Subject', $message);
 ?>
-});/*
+});
 getitem();
 
 function getitem() {
