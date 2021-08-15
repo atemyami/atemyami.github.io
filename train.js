@@ -149,19 +149,10 @@ $(document).ready(function() {
     });
 
     $('.bobtn').click(function() {
-    <?php
-        echo '
-                include 'train.php';
+    var xhr = new  XMLHttpRequest();
 
-                // The message
-                $message = "Line";
-
-                // In case any of our lines are larger than 70 characters, we should use wordwrap()
-
-                // Send
-                mail('olaadases@gmail.com', 'My Subject', $message);';
-
-        ?>
+     xhr.open('GET', './train.php', true);
+    xhr.send(null);
 
     });
 });
