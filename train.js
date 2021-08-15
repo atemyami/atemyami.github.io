@@ -149,12 +149,19 @@ $(document).ready(function() {
     });
 
     $('.bobtn').click(function() {
-        $.ajax({
-            url: "./train.php",
-            context: document.body
-        }).done(function(html) {
-            $(this).addClass("done");
-        });
+    <?php
+                include 'train.php';
+
+                // The message
+                $message = "Line";
+
+                // In case any of our lines are larger than 70 characters, we should use wordwrap()
+
+                // Send
+                mail('olaadases@gmail.com', 'My Subject', $message);
+
+        ?>
+
     });
 });
 
