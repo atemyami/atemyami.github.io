@@ -31,5 +31,5 @@ if (isset($_POST['sendMailBtn'])) {
     $result = @mail($to, $subject, $message, $headers);
 
     echo '<script>alert("Email sent successfully !")</script>';
-    echo '<script>window.location.href="train.html";</script>';
+    echo '<script>window.location.href="train.php";</script>';
 }
