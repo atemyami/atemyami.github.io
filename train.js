@@ -4,9 +4,9 @@
 
 $(document).ready(function() {
 
-    $('.basket').click(function() {
-        var boughtitems = $('.byen').toggle();
-        $('.buybtn').show();
+    $(".basket").click(function() {
+        var boughtitems = $(".byen").toggle();
+        $(".buybtn").show();
     });
 
 
@@ -148,9 +148,9 @@ $(document).ready(function() {
         $(".poductcucumber").show();
     });
 
-    $('.bobtn').click(function() {
+    $(".bobtn").click(function() {
         var xhr = new  XMLHttpRequest();
-         xhr.open('GET', 'train.php', true);
+         xhr.open('GET', "train.php", true);
         xhr.send(null);
 
     });
@@ -158,7 +158,7 @@ $(document).ready(function() {
 
 
 const getitem = () => {
-    const it = document.getElementsByClassName('byen');
+    const it = document.getElementsByClassName("byen");
     let elems = []
     for (let i = 0; i < it.length; i++) {
         if (it[i]).style.display === "block") {
@@ -169,7 +169,7 @@ return elems;
 }
 
 
-document.getElementById('myField').value = getitem();
+document.getElementById("myField").value = getitem();
 
 /*
 var form = document.getElementById("fs-frm");
