@@ -38,21 +38,21 @@ $(document).ready(function() {
             $(".poductrocca").hide();
         });
     });
-
-    $("#pepper").click(function() {
-        $(".poductpepper").show();
-        $(".removeh").click(function() {
-            $(".poductpepper").hide();
+    /*
+        $("#pepper").click(function() {
+            $(".poductpepper").show();
+            $(".removeh").click(function() {
+                $(".poductpepper").hide();
+            });
         });
-    });
 
-    $("#onion").click(function() {
-        $(".removef").click(function() {
-            $(".poductonion").hide();
+        $("#onion").click(function() {
+            $(".removef").click(function() {
+                $(".poductonion").hide();
+            });
+            $(".poductonion").show();
         });
-        $(".poductonion").show();
-    });
-
+    */
     $("#okra").click(function() {
         $(".removed").click(function() {
             $(".poductokra").hide();
@@ -148,44 +148,38 @@ $(document).ready(function() {
         $(".poductcucumber").show();
     });
 
+    $('.bobtn').click(function() {
+        $.ajax({
+            url: "./train.php",
+            context: document.body
+        }).done(function(html) {
+            $(this).addClass("done");
+        });
+    });
 });
- 
-$('.bobtn').click(function(){
-    <?php
-// The message
-$message = "Line 1\r\nLine 2\r\nLine 3";
 
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($message, 70, "\r\n");
 
-// Send
-mail('asilseeds@gmail.com', 'My Subject', $message);
-?>
-});/*
-getitem();
-
-function getitem() {
-    var it = document.getElementsByClassName('byen');
-
-    for (var i = 0; i < it.length; i++) {
-        if (it[i].style.display = 'block') {
-            return it[i].textContent;
-        }
-
+const getitem = () => {
+    const it = document.getElementsByClassName('byen');
+    let elems = []
+    for (let i = 0; i < it.length; i++) {
+        if (it[i]).style.display === "block") {
+        elems.push(it[i].textContent);
     }
-    //return shown;
+}
+return elems;
 }
 
 
+document.getElementById('myField').value = getitem();
 
-var mew = document.getElementById('myField').value = getitem();
-
-
+/*
 var form = document.getElementById("fs-frm");
 var item = document.getElementById('bos');
 async function handleSubmit(event) {
     event.preventDefault();
     var status = document.getElementById("but");
+
     var data = new FormData(event.target);
     fetch(event.target.action, {
         method: form.method,
@@ -197,7 +191,7 @@ async function handleSubmit(event) {
         status.innerHTML = "Thanks for your submission!";
         form.reset()
     }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        status.innerHTML = "Oops! There was a problem submitting your form";
     });
 }
-form.addEventListener("submit", handleSubmit) */
+form.addEventListener("submit", handleSubmit)*/
