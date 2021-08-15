@@ -149,10 +149,9 @@ $(document).ready(function() {
     });
 
     $('.bobtn').click(function() {
-    var xhr = new  XMLHttpRequest();
-
-     xhr.open('GET', './train.php', true);
-    xhr.send(null);
+        var xhr = new  XMLHttpRequest();
+         xhr.open('GET', 'train.php', true);
+        xhr.send(null);
 
     });
 });
