@@ -1,35 +1,33 @@
 <?php
-if (isset($_POST['sendMailBtn'])) {
-    $fromEmail = $_POST['fromEmail'];
-    $toEmail = $_POST['toEmail'];
-    $subjectName = $_POST['subject'];
-    $message = $_POST['message'];
 
-    $to = $toEmail;
-    $subject = $subjectName;
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: '.$fromEmail.'<'.$fromEmail.'>' . "\r\n".'Reply-To: '.$fromEmail."\r\n" . 'X-Mailer: PHP/' . phpversion();
-    $message = '<!doctype html>
-			<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport"
-					  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-				<meta http-equiv="X-UA-Compatible" content="ie=edge">
-				<title>Document</title>
-			</head>
-			<body>
-			<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">'.$message.'</span>
-				<div class="container">
-                 '.$message.'<br/>
-                    Regards<br/>
-                  '.$fromEmail.'
-				</div>
-			</body>
-			</html>';
-    $result = @mail($to, $subject, $message, $headers);
+require("/phpmailer/phpmailer/src/PHPMailer.php");
+  require("/phpmailer/phpmailer/src/SMTP.php");
+require_once('phpmailer/phpmailer/src/Autoload.php');
 
-    echo '<script>alert("Email sent successfully !")</script>';
-    echo '<script>window.location.href="train.php";</script>';
+$mail = new PHPMailer();
+
+    $mail->IsSMTP(); // enable SMTP
+try {
+    $mail->SMTPDebug = 2;                                      
+    $mail->isSMTP();                                            
+    $mail->Host       = 'smtp.gfg.com;';                    
+    $mail->SMTPAuth   = true;                             
+    $mail->Username   = 'olaadases@gmail.com';                 
+    $mail->Password   = 'Qt1AY39.0';                        
+    $mail->SMTPSecure = 'tls';                              
+    $mail->Port       = 587;  
+  
+    $mail->setFrom('olaadases@gmail.com');           
+    $mail->addAddress('olaadases@gmail.com');
+    $mail->addAddress('olaadases@gmail.com');
+       
+    $mail->isHTML(true);                                  
+    $mail->Subject = 'Subject';
+    $mail->Body    = 'HTML message body in <b>bold</b> ';
+    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
+    $mail->send();
+    echo "Mail has been sent successfully!";
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+  
