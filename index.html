@@ -655,63 +655,40 @@
         </div>
 
     </div>
-    <!-- <form >
-    <fieldset id="fs-frm-inputs">
-    <div class="forma">
-     
-        <div class="tit">
-            <h1>Buy an item</h1>
-        </div>
+  
+    <form id="fs-frm" action="./train.php" method="POST" enctype="multipart/form-data">
+        <fieldset id="fs-frm-inputs">
+            <div class="forma">
 
-        <div class="piccom"><img src="./buy.jpeg" alt="buy"></div>
-        <div class="containe">
-            <div class="name">
-              <label for="full-name">Full Name</label><br><br>
-                <label for="email-address">Email Address</label><br><br>
-                 <label for="message">Address</label>
+                <div class="tit">
+                    <h1>Buy an item</h1>
+                </div>
+
+                <div class="piccom"><img src="./buy.jpeg" alt="buy"></div>
+                <div class="containe">
+                    <div class="name">
+                        <label for="full-name">Full Name</label><br><br>
+                        <label for="email-address">Email Address</label><br><br>
+                        <label for="message">Address</label>
 
 
+                    </div>
+                    <div class="input">
+                        <input type="text" name="name" id="full-name" required="">
+                        <input type="email" name="_replyto" id="email-address" required=""><br>
+                        <input type="text" name="nname" id="full-address" required=""><br>
+                        <input type="text" id="myField" name="itmes" value="" />
+                        <input type="hidden" name="_subject" id="bos" value="Contact Form Submission">
+                    </div>
+                    <div class="submit" id="sendinfo"> <input class="butto" type="submit" value="Submit"></div>
+
+                </div>
             </div>
-            <div class="input">
-                    <input type="text" name="name" id="full-name" required="">
-               <input type="email" name="_replyto" id="email-address" required=""><br>
-                 <input type="text" name="nname" id="full-address"  required=""><br>
-              <input type="hidden" name="_subject" id="bos" value="Contact Form Submission">
-               
 
-            </div>
-            <div class="submit" id="sendinfo">   <input class="butto" type="submit" value="Submit"></div>
-                <?php include './train.php'; ?>
-             <?php include 'train.php'; ?>
-        </div>
-        </div>
-        
+
+        </fieldset>
+    </form>
  
-    </fieldset>
- </form>-->
-     <form action="train.php" method="post" class="form-signin">
-                        <div class="form-label-group">
-                            <label for="inputEmail">From <span style="color: #FF0000">*</span></label>
-                            <input type="text" name="fromEmail" id="fromEmail" class="form-control"  value="info@codingbirdsonline.com" readonly required autofocus>
-                        </div> <br/>
-                        <div class="form-label-group">
-                            <label for="inputEmail">To <span style="color: #FF0000">*</span></label>
-                            <input type="text" name="toEmail" id="toEmail" class="form-control" placeholder="Email address" required autofocus>
-                        </div> <br/>
-                        <label for="inputPassword">Subject <span style="color: #FF0000">*</span></label>
-                        <div class="form-label-group">
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
-                        </div><br/>
-                        <label for="inputPassword">Message <span style="color: #FF0000">*</span></label>
-                        <div class="form-label-group">
-                            <textarea  id="message" name="message" class="form-control" placeholder="Message" required ></textarea>
-                        </div> <br/>
-                        <button type="submit" name="sendMailBtn" class="btn btn-lg btn-primary btn-block text-uppercase" >Send Email</button>
-                    </form>
-
-
-
-    <footer>
         <div>
             <div class="inside">
   
