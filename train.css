@@ -373,6 +373,8 @@ header .byen .bobtn {
     justify-content: center;
     left: 100px;
     height: 50px;
+    margin-left: -120px;
+    padding-bottom: 44px;
     background-color: #25ba4d;
     border-radius: 28px;
     border: 1px solid #ffffff;
@@ -463,8 +465,7 @@ header .logos {
         color: rgb(255, 255, 255);
         position: relative;
         justify-content: center;
-        left: 38px;
-        height: 50px;
+        height: 40px;
         background-color: #25ba4d;
         border-radius: 28px;
         border: 1px solid #ffffff;
@@ -542,8 +543,11 @@ header .logos {
 
 header .bar {
     float: left;
-    bottom: 5%;
+    bottom: 20px;
     position: absolute;
+    padding-top: 7px;
+    width: 100%;
+    background-color: rgb(165 221 45/ 30%);
 }
 
 header .bar nav {
@@ -836,6 +840,8 @@ footer div .inside ul li a {
 .buy .seedout .seedin .im img {
     height: 225px;
     width: 225px;
+    margin-left: -65px;
+    margin-top: -10px;
 }
 
 .buy .seedout .seedin .afterimg .text {
@@ -920,23 +926,6 @@ h5 {
         -ms-transform: translateX(147%) translateY(-50%);
         -o-transform: translateX(147%) translateY(-50%);
     }
-    /*
-        .buy .items .title {
-            padding-top: 150px;
-            justify-content: center;
-            font-size: 22px;
-        }
-            .buy .seedout {
-            padding-right: 10px;
-            padding-bottom: 5px;
-            padding-left: 1px;
-            padding-top: 30px;
-        }
-        .buy .contain {
-                margin-right: 10px;
-                margin-left: 10px;
-            }
-            */
     fieldset .forma .containe .input .submit .butto {
         background-color: #fff;
     }
@@ -994,6 +983,8 @@ h5 {
     .buy .seedout .seedin .im img {
         height: 180px;
         width: 175px;
+        margin-left: -18px;
+        margin-top: -5px;
     }
     .buy .seedout .seedin {
         border: 2px solid rgb(134, 185, 121);
@@ -1005,7 +996,14 @@ h5 {
         position: relative;
         padding-bottom: 0px;
     }
-    .buy .seedout .seedin .afterimg .butt {
+    .buy .seedout .seedin .afterimg button {
+        width: fit-content;
+        position: relative;
+        width: 170px;
+        margin-left: -65px;
+        height: 50px;
+    }
+    .butt {
         background-color: #25ba4d;
         border-radius: 28px;
         border: 1px solid #ffffff;
@@ -1013,18 +1011,10 @@ h5 {
         cursor: pointer;
         color: #ffffff;
         font-family: Arial;
-        font-size: 14px;
-        padding: 10px 11px;
+        font-size: 17px;
+        padding: 16px 31px;
         text-decoration: none;
         text-shadow: 0px 1px 0px #2f6627;
-    }
-    .buy .seedout .seedin .afterimg button {
-        /* display: inline; */
-        width: fit-content;
-        position: relative;
-        width: 170px;
-        margin-left: 1px;
-        height: 50px;
     }
 }
 
@@ -1041,6 +1031,7 @@ fieldset {
     color: #ffffff;
     font-family: Arial;
     font-size: 17px;
+    margin-left: -90px;
     padding: 16px 31px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #2f6627;
@@ -1053,13 +1044,6 @@ fieldset {
 .butt:active {
     position: relative;
     top: 1px;
-}
-
-@media (max-width:750px) {
-    ./*buy .contain {
-    margin-right: 50px;
-    margin-left: 50px;
-    }*/
 }
 
 .forma {
@@ -1094,8 +1078,8 @@ fieldset {
 .forma .piccom img {
     position: relative;
     float: right;
-    margin-right: 5%;
-    margin-top: 7%;
+    height: 300px;
+    margin-right: 7%;
 }
 
 .forma .containe {
@@ -1109,8 +1093,8 @@ fieldset {
         position: relative;
         float: right;
         width: 100%;
-        margin-right: 0;
-        margin-top: 7%;
+        height: fit-content;
+        margin-right: 7%;
     }
     .forma .tit h1 {
         text-align: left;
