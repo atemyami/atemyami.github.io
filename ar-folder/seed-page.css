@@ -1,0 +1,451 @@
+/*start variables*/
+
+SEMILLAS* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+ :root {
+    --main-coloroo: rgba(46, 143, 16, 0.883);
+    --main-color: black;
+    ---serction-padding: 100px;
+}
+
+ul {
+    text-decoration: none;
+}
+
+
+/*end variables*/
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(255, 255, 255);
+}
+
+h2 {
+    line-height: 1.8;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*THE LOGO*/
+
+header img {
+    padding-bottom: 30px;
+    height: 120px;
+}
+
+header .container nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .container nav ul {
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 767px) {
+    header .container nav ul {
+        display: none;
+    }
+    header .container nav .toggle-menu {
+        margin-right: 10%;
+        margin-bottom: 7%;
+    }
+    header .container nav .toggle-menu:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        color: darkgray;
+        line-height: 5px;
+        background-color: rgb(165 221 45/ 50%);
+    }
+}
+
+header .container nav .toggle-menu:hover {
+    color: var(--main-coloroo);
+}
+
+header .container nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 40px 10px;
+    z-index: 2;
+    position: relative;
+}
+
+header .container nav .toggle-menu {
+    color: rgb(63, 63, 63);
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    header .container nav .toggle-menu {
+        display: none;
+    }
+}
+
+header .container nav ul li a:current {
+    color: var( --main-coloroo);
+    border-bottom: 1px solid var(--main-coloroo);
+}
+
+header .container nav ul li a:hover {
+    color: var( --main-coloroo);
+    border-bottom: 1px solid var(--main-coloroo);
+}
+
+.main {
+    width: auto;
+       position: relative;
+flex: 1;
+ display: flex;
+     margin-bottom: 1000px;
+}
+
+.main .logo {
+    height: 350px;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 30px;
+    margin-right: 5%;
+    flex: auto;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+@media (max-width: 848px) {
+    .main .logo {
+        margin-top: 0%;
+        margin-bottom: 5%;
+        margin-left: 0%;
+        padding-left: 55px;
+        padding-bottom: 10px;
+    }
+}
+
+.main .content {
+    margin-left: 40%;
+    margin-top: 30px;
+    margin-right: 20%;
+    position: absolute;
+    flex: 1;
+    
+}
+
+.main .content h2 {
+    color:#55d12f;
+}
+
+@media (max-width: 848px) {
+    .main .content {
+        margin-top: 30%;
+        margin-bottom: 5%;
+        margin-left: 10%;
+    }
+}
+table, th, td {
+  border: 1px solid #55d12f;
+  font-weight: normal;
+
+}
+.main  .price p{
+font-size: 18px;
+    font-weight: bold;
+}
+.main .content .btn button{
+        background-color: #25ba4d;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+     border-style: outset;
+        font-size: 20px;
+                padding: 6px 15px;
+                overflow: hidden;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #2f6627;
+  
+}
+.main .content .btn button:hover{
+    background-color: #4fcf1c;
+}
+.main .content .btn .value{
+    color: #4fcf1c;
+     background-color: #ffffff;
+     border: 1px solid #4fcf1c;
+}
+.main .content .btn .value:hover{
+      background-color: #d2f1c5;
+}
+body .photos {
+
+    position: relative;
+    margin-bottom: 100px;
+}
+.photos  h2{
+font-size: 30px;
+ 
+        position: relative;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+}
+
+.photos .seeim{
+margin-right: 270px;
+    margin-left: 270px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.photos  .seeim .seedout {
+    display: block;
+}
+
+.photos .seeim .seedout .seedin {
+border: 2px solid rgb(134, 185, 121);
+    height: fit-content;
+    width: 240px;
+    position: relative;
+}
+
+.photos   .seeim .seedout .seedin .im {
+    height: 225px;
+    width: 225px;
+}
+
+.photos  .seeim .seedout .seedin .im img {
+    height: 225px;
+    width: 225px;
+}
+
+@media(max-width:1320px)
+{
+    .main {
+    width: auto;
+       position: relative;
+flex: 1;
+ display: flex;
+     margin-bottom: 1000px;
+}
+
+    .photos{
+position: relative;
+    margin-bottom: 100px;
+    }
+    .photos .seeim{
+        margin-top: 70px;
+margin-right: 70px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+@media(max-width:915px)
+{
+  .main {
+    width: auto;
+       position: relative;
+flex: 1;
+ display: flex;
+     margin-bottom: 1100px;
+}
+}
+footer div .inside {
+    background-color: #365731;
+    height: 500px;
+    
+}
+
+footer div .inside .foot p {
+    line-height: 2;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+footer div .inside .foot {
+    float: right;
+    padding-top: 40px;
+    -webkit-transform: translateX( -20%);
+    -moz-transform: translateX( -20%);
+    -ms-transform: translateX( -20%);
+    -o-transform: translateX( -20%);
+}
+
+footer div .inside .foot .f {
+    display: flex;
+}
+
+@media (max-width:982px) {
+    footer div .inside .foot {
+        position: absolute;
+        justify-content: flex-start;
+        display: inline;
+        padding-top: 16%;
+        padding-left: 25%;
+    }
+    footer div .inside .foot .f {
+        display: flex;
+    }
+}
+
+footer div .inside .img-f {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    height: 90px;
+    margin-top: 230px;
+    transform: translateX( 250%);
+    -webkit-transform: translateX( 250%);
+    -moz-transform: translateX( 250%);
+    -ms-transform: translateX( 250%);
+    -o-transform: translateX( 250%);
+}
+
+@media (max-width:1610px) {
+    footer div .inside .img-f {
+        position: absolute;
+        transform: translateX( 50%);
+        -webkit-transform: translateX( 50%);
+        -moz-transform: translateX( 50%);
+        -ms-transform: translateX( 50%);
+        -o-transform: translateX( 50%);
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:982px) {
+    footer div .inside .img-f {
+        position: absolute;
+        transform: translateX( 50%);
+        -webkit-transform: translateX( 50%);
+        -moz-transform: translateX( 50%);
+        -ms-transform: translateX( 50%);
+        -o-transform: translateX( 50%);
+        margin-top: 45%;
+        display: flex;
+    }
+}
+
+footer div .inside .left-container {
+    line-height: 2;
+    font-size: 14px;
+}
+
+footer div .inside ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 70px;
+    list-style: none;
+    text-align: left;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer div .inside ul li {
+    padding: 70px 20px 70px 20px;
+    font-size: 16px;
+}
+
+footer div .inside ul li a {
+    text-decoration: none;
+}
+
+@media (max-width:1610px) {
+    footer div .inside ul {
+        position: absolute;
+        justify-content: flex-start;
+        display: block;
+        position: absolute;
+        padding-left: 5%;
+        margin-top: 5%;
+        display: flex;
+    }
+    footer div .inside ul li {}
+}
+
+/*
+button{
+         background-color: #25ba4d;
+        border-radius: 25px;
+        border: 1px solid #ffffff;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+       font-size: 30px;
+        padding: 20px 30px;
+        overflow: hidden;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #2f6627;
+        font-size: 24px;
+
+}
+.main .btn .csdec{
+        width: 40px;
+    height: 30px;
+}
+.main .btn .csinc{
+        width: 40px;
+    height: 30px;
+}
+.main .btn .value{
+    width: 40px;
+    height: 30px;
+}
+  .buy .items .form .cssbtn:hover {
+        background-color: #5eb52f;
+    }
+.main .btn {
+
+}*/
+
