@@ -1,0 +1,293 @@
+    /*start variables*/
+    
+    SEMILLAS* {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    
+     :root {
+        --main-coloroo: rgba(152, 223, 0, 0.883);
+        --main-color: black;
+        ---serction-padding: 100px;
+    }
+    
+    ul {
+        text-decoration: none;
+    }
+    /*end variables*/
+    
+    html {
+        scroll-behavior: smooth;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    h2 {
+        line-height: 1.8;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    header {
+        background-color: rgb(255, 255, 255);
+    }
+    /*THE LOGO
+
+header img {
+    padding-bottom: 30px;
+    height: 120px;
+}*/
+    
+    header .container nav {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    header .container nav ul {
+        display: flex;
+        font-size: 14px;
+        list-style: none;
+    }
+    
+    @media (max-width: 767px) {
+        header .container nav ul {
+            display: none;
+        }
+        header .container nav .toggle-menu {
+            margin-right: 10%;
+            margin-bottom: 7%;
+        }
+        header .container nav .toggle-menu:hover+ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            font-size: 14px;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            color: darkgray;
+            line-height: 5px;
+            background-color: rgb(165 221 45/ 50%);
+        }
+    }
+    
+    header .container nav .toggle-menu:hover {
+        color: var( --main-coloroo);
+    }
+    
+    header .container nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: rgb(66, 66, 66);
+        font-size: 14px;
+        transition: 0.3s;
+        padding: 40px 10px;
+        z-index: 2;
+        position: relative;
+    }
+    
+    header .container nav .toggle-menu {
+        color: rgb(63, 63, 63);
+        font-size: 22px;
+    }
+    
+    @media (min-width: 768px) {
+        header .container nav .toggle-menu {
+            display: none;
+        }
+    }
+    
+    header .container nav ul li a:current {
+        color: var( --main-coloroo);
+        border-bottom: 1px solid var(--main-coloroo);
+    }
+    
+    header .container nav ul li a:hover {
+        color: var( --main-coloroo);
+        border-bottom: 1px solid var(--main-coloroo);
+    }
+    
+    .main {
+        width: 800px;
+    }
+    
+    while (lines[0]==true) {
+        if (allCharacters[characterProgress].key==8) return false;
+    }
+    
+    .main .logo {
+        position: absolute;
+        height: 130px;
+        margin-left: 10%;
+        margin-top: 30px;
+        margin-right: 5%;
+        flex: auto;
+        align-items: flex-start;
+        justify-content: end;
+    }
+    
+    @media (max-width: 848px) {
+        .main .logo {
+            margin-top: 0%;
+            margin-bottom: 5%;
+            margin-left: 0%;
+        }
+    }
+    
+    .main .content {
+        margin-left: 40%;
+        margin-top: 30px;
+        margin-right: 20%;
+        position: absolute;
+        flex: 1;
+        font-size: 14px;
+        align-items: flex-start;
+        justify-content: end;
+    }
+    
+    .main .content p {
+        font-size: 12px;
+    }
+    
+    .main .content h2 {
+        color: var( --main-coloroo);
+    }
+    
+    @media (max-width: 848px) {
+        .main .content {
+            margin-top: 30%;
+            margin-bottom: 5%;
+            margin-left: 10%;
+        }
+    }
+    
+    footer {
+        width: 100%;
+    }
+    
+    footer div .inside {
+        /*background-color: #365731;*/
+        background-color: #3d6737;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 50px 50px 50px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    footer div .inside .foot {
+        float: right;
+        padding-top: 40px;
+        -webkit-transform: translateX( -20%);
+        -moz-transform: translateX( -20%);
+        -ms-transform: translateX( -20%);
+        -o-transform: translateX( -20%);
+    }
+    
+    footer div .inside .foot .numone {
+        padding-right: 50px;
+        position: relative;
+        flex: 0 1 230px;
+    }
+    
+    footer div .inside .foot .numtwo {
+        padding-right: 50px;
+        position: relative;
+        flex: 0 1 230px;
+    }
+    
+    footer div .inside .foot .numthree {
+        padding-right: 50px;
+        position: relative;
+        flex: 0 1 230px;
+    }
+    
+    body footer div .inside .outimg {
+        height: auto;
+        width: auto;
+        padding-top: 2em;
+        padding-left: 2em;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    @media(min-width:845px) {
+        body footer div .inside .outimg .img-f {
+            display: none;
+            src: url("./nextphoto.peg");
+        }
+    }
+    
+    @media( max-width:1206px) {
+        body footer div .inside .outimg .img-f {
+            display: none;
+        }
+    }
+    
+    body footer div .inside .outimg .img-f {
+        height: auto;
+        width: auto;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    footer div .inside ul {
+        margin: 0;
+        padding: 0;
+        padding-left: 30px;
+        list-style: none;
+    }
+    
+    footer div .inside ul li {
+        padding: 5px 70px 5px 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: rgb(34, 34, 34);
+    }
+    
+    @media (max-width:880px) {
+        footer div .inside ul li {
+            padding: 5px 30px 5px 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: rgb(34, 34, 34);
+        }
+    }
+    
+    footer div .inside nav ul {
+        text-decoration: none;
+    }
+    
+    footer div .inside h5 {
+        color: rgb(31 169 0);
+    }
+    
+    footer div .inside ul li a {
+        text-decoration: none;
+    }
